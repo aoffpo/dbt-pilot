@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: source_data
+    description: 'a sample table that has one column'
+    columns:
+      - name: id
+        description: A primary key for source data.
+        tests:
+          - unique
+          - not_null
+  - name: ref_source_data_one
+    description: 'a sample table that referenced the other table'
+    columns:
+      - name: id
+        description: A primary key for source data.
+        tests:
+          - unique
+          - not_null
