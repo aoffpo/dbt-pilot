@@ -10,6 +10,10 @@ Try running the following commands:
 - dbt run
 - dbt test
 
+Docs
+- dbt docs generate
+- dbt docs serve
+
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
