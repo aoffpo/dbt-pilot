@@ -2,9 +2,10 @@ version: 2
 
 models:
   - name: source_data
-    description: 'a sample table that has one column'
+    description: '{{ doc("table_source_data") }}'
     columns:
       - name: id
+        type: integer
         description: A primary key for source data.
         tests:
           - unique
@@ -13,6 +14,7 @@ models:
     description: 'a sample table that referenced the other table'
     columns:
       - name: id
+        type: int
         description: A primary key for source data.
         tests:
           - unique

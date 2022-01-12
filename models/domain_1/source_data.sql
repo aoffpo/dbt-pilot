@@ -25,3 +25,9 @@ from source_data
 */
 
 -- where id is not null
+{{ dbt_audit(
+    created_by="@bob",
+    updated_by="@bill",
+    created_date="2021-06-11",
+    updated_date="2021-12-16"
+) }}
