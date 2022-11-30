@@ -14,6 +14,8 @@ or copy sample profile.yml in the root of the repo to ~/.dbt/profiles.yml
 ** DO NOT CHECK IN dbt_profile.yml.  This is just a quickstart.  Use Secrets Manager or Vault in your CI pipeline to manage your connection strings.
   
 ### Local development:  
+`dbt test`
+`dbt run`
 `dbt docs generate`  
 `dbt docs serve`  
 
@@ -23,7 +25,7 @@ To develop your catalog
 dbt provides the development framework data transforms and dependency management in your development environment, but in this scenario, you create an image from the generated docs and deploy it to your container solution.  
 You are responsible for your development environment, source code integration and collaboration processes and CI/CD to deploy your models as with a normal software solution.
 
-The sample project is in the `dbt/` folder
+The sample project is in the nested `dbt_pilot/` folder
 
 build a sample image here:  `resources/docker/build.sh` . 
   
