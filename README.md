@@ -15,7 +15,7 @@ or copy sample profile.yml in the root of the repo to ~/.dbt/profiles.yml
   
 ### Local development:  
 `dbt test`  
-`dbt run` 
+`dbt run`  
 `dbt docs generate`  
 `dbt docs serve`  
 
