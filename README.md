@@ -14,8 +14,8 @@ or copy sample profile.yml in the root of the repo to ~/.dbt/profiles.yml
 ** DO NOT CHECK IN dbt_profile.yml.  This is just a quickstart.  Use Secrets Manager or Vault in your CI pipeline to manage your connection strings.
   
 ### Local development:  
-`dbt test`
-`dbt run`
+`dbt test`  
+`dbt run` 
 `dbt docs generate`  
 `dbt docs serve`  
 
