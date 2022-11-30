@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: asset_owners
+    description: '{{ doc("asset_owners") }}'
+    columns:
+      - name: asset_name
+        type: varchar
+        description: name.
+        tests:
+          - unique
+          - not_null
+      - name: owner_name
+        type: varchar
+        description: A name
+        tests:
+          - unique
+          - not_null
+  - name: user
+    description: '{{ doc("user") }}'
+    columns:
+      - name: user_id
+        type: int
+        description: A primary key for source data.
+        tests:
+          - unique
+          - not_null

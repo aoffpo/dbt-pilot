@@ -1,23 +1,34 @@
-# dbt-pilot
+# DBT Example
+## with source database and docker image creation.  
 
-Welcome to your new dbt project!
+### Create sample database as data source 
+`resources/database/run.sh`  
+Seed the sample data (dbt also has this capability, but you can also use the provided scripts)
+`resources/database/pilot_db.sql`
 
-### Using the starter project
-Install dependecies using 
-- dbt deps
+### Create a profile 
+`code ~/.dbt/profiles.yml`  
+https://docs.getdbt.com/docs/get-started/connection-profiles 
+or copy sample profile.yml in the root of the repo to ~/.dbt/profiles.yml 
+  
+** DO NOT CHECK IN dbt_profile.yml.  This is just a quickstart.  Use Secrets Manager or Vault in your CI pipeline to manage your connection strings.
+  
+### Local development:  
+`dbt docs generate`  
+`dbt docs serve`  
 
-Try running the following commands:
-- dbt run
-- dbt test
+To develop your catalog
 
-Docs
-- dbt docs generate
-- dbt docs serve
+### Use dbt Core
+dbt provides the development framework data transforms and dependency management in your development environment, but in this scenario, you create an image from the generated docs and deploy it to your container solution.  
+You are responsible for your development environment, source code integration and collaboration processes and CI/CD to deploy your models as with a normal software solution.
 
+The sample project is in the `dbt/` folder
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+build a sample image here:  `resources/docker/build.sh` . 
+  
+### Use dbt Cloud 
+In this scenario, you won't have to host your documentation yourself and dbt Cloud provides a  
+* Cloud-based collaboration environment with your version control system and CI/CD 
+* Testing and Documentation - it hosts your catalog and executes your tests
+https://docs.getdbt.com/docs/dbt-cloud/cloud-overview

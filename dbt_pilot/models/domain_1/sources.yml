@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: pilot_db
+    schema: public
+    database: pilot_db
+    tables:
+      - name: asset
+      - name: user
+

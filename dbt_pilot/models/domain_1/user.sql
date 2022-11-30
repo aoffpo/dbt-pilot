@@ -18,16 +18,10 @@ with source_data as (
 )
 
 select *
-from source_data
+from user
 
 /*
     Uncomment the line below to remove records with null `id` values
 */
 
 -- where id is not null
-{{ dbt_audit(
-    created_by="@bob",
-    updated_by="@bill",
-    created_date="2021-06-11",
-    updated_date="2021-12-16"
-) }}

@@ -1,0 +1,12 @@
+dbt_pilot:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: mysecretpassword
+      port: 5432
+      dbname: pilot_db
+      schema: dbt_devsteve
+      threads: 4
