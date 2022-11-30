@@ -1,4 +1,4 @@
-# DBT Example
+# DBT Boilerplate 
 ## with source database and docker image creation.  
 
 ### Create sample database as data source 
