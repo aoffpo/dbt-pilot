@@ -1,5 +1,5 @@
 # DBT Boilerplate 
-with source database and docker image creation.  
+with source database and documentation via docker image creation.  
 
 ### Create sample database as data source 
 `resources/database/run.sh`  
