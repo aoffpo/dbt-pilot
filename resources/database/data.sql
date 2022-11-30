@@ -5,4 +5,4 @@ VALUES (1, 'sink', 'the sink in the kitchen'),
 
 INSERT INTO user (user_id, "name", "role", asset_id)
 VALUES (1, 'Bob', 'worker', 2),
-(1, 'Jane', 'superviser', 3);
+(2, 'Jane', 'superviser', 3);
