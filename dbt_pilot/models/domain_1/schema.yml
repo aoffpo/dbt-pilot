@@ -16,6 +16,9 @@ models:
       - name: owner_name
         type: varchar
         description: A name
+      - name: update_date
+        type: date
+        description: 'Date Updated'
   - name: user
     description: '{{ doc("user") }}'
     columns:

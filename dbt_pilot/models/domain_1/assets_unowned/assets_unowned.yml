@@ -1,0 +1,17 @@
+version: 2
+
+models: 
+  - name: assets_unowned
+    description: 'Find assets without owners' 
+    columns: 
+    - name: asset_name
+      type: varchar
+      description: name.
+metrics: 
+  - name: assets_unowned_count
+    label: Asset Without Owners
+    model: ref('assets_unowned')
+    description: 'Assets not owned by anyone'
+    calculation_method: count
+    expression: 'asset_name'
+    timestamp: 'update_date'
