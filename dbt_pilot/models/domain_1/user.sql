@@ -18,7 +18,7 @@ with source_data as (
 )
 
 select *
-from user
+from {{ source('pilot_db', 'user') }}
 
 /*
     Uncomment the line below to remove records with null `id` values

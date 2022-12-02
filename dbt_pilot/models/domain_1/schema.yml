@@ -3,6 +3,9 @@ version: 2
 models:
   - name: asset_owners
     description: '{{ doc("asset_owners") }}'
+    tests:
+      - dbt_utils.equal_rowcount:
+           compare_model: source('pilot_db','asset')
     columns:
       - name: asset_name
         type: varchar
@@ -13,9 +16,6 @@ models:
       - name: owner_name
         type: varchar
         description: A name
-        tests:
-          - unique
-          - not_null
   - name: user
     description: '{{ doc("user") }}'
     columns:
@@ -25,3 +25,9 @@ models:
         tests:
           - unique
           - not_null
+      - name: name
+        type: varchar
+      - name: role
+        type: varchar
+      - name: asset_id
+        type: int

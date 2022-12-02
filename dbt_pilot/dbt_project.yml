@@ -32,6 +32,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  installed_package:
+    # hide all models from this package in the docs
+    +docs:
+      show: false
   dbt-pilot:
     # Config indicated by + and applies to all files under models/domain_1/
     domain_1:
